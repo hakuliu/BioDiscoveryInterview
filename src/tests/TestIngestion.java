@@ -16,20 +16,9 @@ import util.GenomeSearchTree.GenomeTreeLoadException;
 
 public class TestIngestion {
 	private static File inputfile = new File("testdata/ingestdata/smallcase.txt");
-	private static File brokefile1 = new File("testdata/ingestdata/broken1.txt");
 	
 	private static File outputdir = new File("testdata/ingestdata/testresult");
-	@Test
-	public void testCorrupt() {
-		boolean failed = false;
-		DataIngestor ingestor = new DataIngestor(brokefile1, outputdir);
-		try {
-			ingestor.executeIngest();
-		} catch (IngestionException | IOException | CorruptGeneReadException e) {
-			failed = true;
-		}
-		assert(failed);
-	}
+
 	
 	@Test
 	public void testSmallTree() {
