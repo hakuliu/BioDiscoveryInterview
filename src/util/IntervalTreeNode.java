@@ -100,7 +100,7 @@ public class IntervalTreeNode implements Comparable<IntervalTreeNode>{
 	
 	public String getSerializeString() {
 		StringBuilder builder =  new StringBuilder();
-		builder.append(this.associatedfile.getPath());
+		builder.append(this.associatedfile.getName());
 		builder.append('\t');
 		builder.append(this.start);
 		builder.append('\t');

@@ -128,7 +128,7 @@ public class IntervalTreeConstructor {
 					throw new CorruptGeneReadException("Unrecognizable chromosome tree file format");
 				}
 				
-				File nodefile = new File(split[0]);
+				File nodefile = new File(f.getParentFile().getAbsolutePath()+"/"+split[0]);
 				if(!nodefile.exists()) {
 					throw new CorruptGeneReadException("Expecting data in location " + nodefile.getPath() + " but none found");
 				}
